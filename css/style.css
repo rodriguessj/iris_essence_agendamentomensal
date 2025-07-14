@@ -1,0 +1,574 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+/* Body da página */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+    padding-bottom: 60px;
+    margin: 0;
+    /* deixa espaço suficiente para o footer */
+  
+}
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    
+}
+nav ul li {
+    position: relative;
+    
+}
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    transition: background-color 0.3s;
+    
+}
+nav .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:rgb(0, 0, 0);
+    ;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgb(0, 0, 0);
+    z-index: 999;
+    min-width: 200px;
+    
+}
+
+.submenu a:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+    
+}
+nav ul li:hover .submenu {
+    display: flex;
+    flex-direction: column;
+    
+}
+.submenu a {
+    color: #ffffff;
+    padding: 10px 15px;
+    
+}
+.submenu a:hover {
+    background-color:rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    
+}
+th {
+    background-color: #000000;
+    color: white;
+    text-align: left;
+    
+}
+td, th {
+    border: 1px solid #ccc;
+    padding: 10px;
+    
+}
+.login {
+    display: flex;
+    gap: 15px;
+    
+}
+.login a {
+    color: #0a0a0a;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    
+}
+.login a:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+    
+}
+.h2info {
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+}
+.headinfo {
+    background-color: white;
+    
+}
+.pinfo {
+    color: black;
+    margin-left: 20px;
+    padding-left: 10px;
+    margin-top: 20px;
+    
+}
+.galeria {
+    display: flex;
+    flex-wrap: wrap;               /* Permite que as imagens quebrem para a próxima linha */
+    justify-content: center;       /* Centraliza as imagens na linha */
+    gap: 30px;                     /* Espaçamento entre as imagens */
+    padding: 20px;
+}
+
+.navimgs {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.navimgs:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+
+#imgprocedimento {
+    padding: 50px 10px;
+    display: auto;
+    margin: 0 auto;
+    width: 30%;
+    max-width: 800px;
+    height: auto;
+    display: flex;
+    
+}
+/* Ocupa 100% da tela */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+/* Container principal com espaço flexível */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* 100% da altura da viewport */
+
+}
+/* Faz o conteúdo crescer e o footer descer */
+.container > *:not(footer) {
+    flex: 1;
+    
+}
+/* Estilo do footer */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    
+}
+.footer-contato {
+    margin-top: 15px;
+    
+}
+.footer-contato p {
+    margin: 8px 0;
+    font-size: 16px;
+    
+}
+.footer-contato i {
+    margin-right: 8px;
+    color: #fff;
+    
+}
+.footer-contato a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+.footer-contato a:hover {
+    text-decoration: underline;
+    
+}
+.logo {
+    width: 120px;
+    height: auto;
+    padding: 10px 10px;
+    
+}
+.cla-footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    
+}
+.formulario {
+    max-width: 600px;
+    /* Largura reduzida */
+  margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.582);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.178);
+    padding: 20px;
+    height: auto;
+    /* Deixa a altura automática */
+  max-height: 600px;
+    /* Define uma altura máxima */
+  overflow-y: auto;
+    /* Faz com que o conteúdo extra seja rolado, caso o conteúdo ultrapasse a altura */
+
+}
+form fieldset {
+    border: none;
+    padding: 0;
+    
+}
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    
+}
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #000000;
+    background-color: rgba(134, 134, 134, 0.233);
+    
+}
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #00000023;
+    box-sizing: border-box;
+    font-size: 1em;
+    
+}
+input:focus,
+select:focus {
+    outline: none;
+    
+}
+.botoes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.botao_cadastro,
+.botao_limpeza {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    
+}
+.botao_cadastro {
+    background-color: #1d1d1d96;
+    color: white;
+    
+}
+.botao_cadastro:hover {
+    background-color: #5e5e5e69;
+    
+}
+.botao_limpeza {
+    background-color: #6e6e6e70;
+    color: white;
+    
+}
+.botao_limpeza:hover {
+    background-color: #24242477;
+    
+}
+.cadastro-fundo {
+    background-image: url('../imgs/cadastro.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    
+}
+.l-footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    
+}
+.product-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.product-box {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    width: 250px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    
+}
+.product-box:hover {
+    border-color: #242424;
+    /* um verde mais vibrante */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    cursor: pointer;
+    
+}
+.product-image {
+    width: 100%;
+    border-radius: 4px;
+    
+}
+.product-title {
+    font-size: 20px;
+    margin: 12px 0 8px;
+    
+}
+.product-description {
+    font-size: 14px;
+    color: #686868;
+    margin-bottom: 12px;
+    
+}
+.product-price {
+    font-size: 18px;
+    color: #0a940a;
+    margin-bottom: 16px;
+    
+}
+.tcentral {
+    text-align: center;
+    background: linear-gradient(rgb(20, 206, 29), rgb(21, 129, 18));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Para Firefox */
+  background-clip: text;
+    color: transparent;
+    
+}
+/*DROPDOWN*/
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    background-color: #000;
+    /* opcional */
+
+}
+.menu > li {
+    position: relative;
+    
+}
+.menu > li > a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+    
+}
+.menu > li > a:hover {
+    background-color: #444;
+    
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background-color: #000;
+    border: 1px solid #444;
+    z-index: 1000;
+    flex-direction: column;
+    
+}
+.dropdown-menu li a {
+    padding: 10px 15px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+    
+}
+.dropdown-menu li a:hover {
+    background-color: #333;
+    
+}
+.dropdown:hover .dropdown-menu {
+    display: flex;
+    
+}
+
+
+.voltar-button {
+    display: inline-block;
+    background-color: #444;
+    /* cinza escuro */
+    color: white;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    user-select: none;
+    
+}
+.voltar-button:hover {
+    background-color: #222;
+    /* cinza mais escuro no hover */
+    text-decoration: none;
+    color: white;
+    
+}
+.preco-procedimento {
+    font-size: 26px;
+    font-weight: bold;
+    color: #0a940a;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(10, 148, 10, 0.08);
+    padding: 8px 16px;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    width: fit-content;
+}
+
+
+/* Estilo padrão para todas as páginas de exclusão */
+.excluir {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    width: 85%;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.excluir legend {
+    font-size: 2em;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.excluir table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.excluir th {
+    background-color: #000;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+.excluir td {
+    background-color: rgba(255,255,255,0.95);
+    padding: 10px;
+    text-align: center;
+}
+
+.excluir td a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.excluir td a:hover {
+    text-decoration: underline;
+    color: darkred;
+}
+
+
+
+.logout form {
+    display: inline-block;
+    margin: 0;
+}
+
+.logout button {
+    background-color: #e74c3c; /* vermelho suave */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout button:hover {
+    background-color: #c0392b; /* vermelho mais escuro */
+}
+
+.logout button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.5);
+}
+
